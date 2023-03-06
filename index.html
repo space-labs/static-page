@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="shortcut icon" href="images/logo.png">
+        <meta name="description" content="SpaceLabs is an online agency that offers services and products for Minecraft.">
+        <meta name="keywords" content="SpaceLabs, Minecraft, Agency, Services, Products, SpaceLabs Agency">
+        <meta name="author" content="SpaceLabs">
+        <meta property="og:url" content="https://spacelabs.agency/" />
+        <meta property="og:image" content="https://avatars.githubusercontent.com/u/126352840?s=200&v=4"/>
+        <meta property="og:type" content="website"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SpaceLabs | Agency</title>
+        <style>
+            .effect {
+                transform: rotate(359deg);
+                transition: transform 1s linear;
+            }
+        </style>
+    </head>
+
+    <body style="height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center;background: rgb(85, 52, 217);">
+        <img src="/images/logo.png" alt="SpaceLabs Logo" style="width: 180px;">
+        <h1 style="color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 2rem; margin-top: 0.8rem;">SpaceLabs | Agency</h1>
+    </body>
+
+    <script>
+        const element = document.querySelector('img')
+        let clicked = false
+
+        element.addEventListener('click', () => {
+            if (clicked) return
+
+            clicked = true
+            element.classList.add('effect')
+            setTimeout(() => {
+                clicked = false
+                element.classList.remove('effect')
+            }, 1000)
+        })
+    </script>
+</html>
